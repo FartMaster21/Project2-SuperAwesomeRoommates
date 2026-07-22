@@ -94,3 +94,5 @@ document.addEventListener('keydown', function(e) {
 
 // Initialize gallery with first image
 updateGallery(0);
+
+//Code generated with the help of DeepSeek//
