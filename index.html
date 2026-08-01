@@ -1,0 +1,232 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Awesome Roomates</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!--Navigation-->
+  <nav class="navigation">
+     <a href="#" class="active" data-page="home"> home</a>
+     <a href="#" data-page="image gallery"> image gallery</a>
+        <a href="#" data-page="roommates"> roommates</a>
+        <a href="#" data-page="surprise"> surprise</a>
+    </nav>
+
+    <!--Container-->
+    <div class="page-container">
+
+        <!--Home-->
+    <section id="page-home" class="page active-page">
+
+            <!--Header container-->
+            <div class="home-header">
+              <h1> Super Awesome Roommates</h1>
+              <p>One faithful evening, a Craigslist ad, and the magic of friendship.</p>
+            </div>
+
+              <!--Below main header-->
+              <div class="about-container">
+                 <h2>What is this?</h2>
+                 <p>This is a website about a group of roommates and how they navigate their shared space together.</p>
+              </div>
+
+              <!-- Interactive Apartment -->
+      <div class="apartment-container">
+        <h4>Click on the roommates or the objects</h4>
+         <h6>Credits to myself for the drawings. Credits to Internet Archive and Tenor for music, gifs, and images
+              used in the suprise sector of the website.
+         </h6>
+
+        <div class="apartment-wrapper">
+          <!-- Background image with proportional container -->
+          <div class="apartment">
+            <img src="images/apartment.jpeg" alt="Apartment" class="apartment-bg">
+            
+            <!-- Roommate: Ricky -->
+            <div class="clickable roommate" data-target="ricky" data-page="roommates" 
+                 style="left: 12%; top: 49%; width: 32%;">
+              <img src="images/ricky.png" alt="Ricky" class="clickable-img transparent">
+            </div>
+            
+            <!-- Roommate: Dorian  -->
+            <div class="clickable roommate" data-target="dorian" data-page="roommates" 
+                 style="left: 56%; top: 33%; width: 31%;">
+              <img src="images/dorian.png" alt="Dorian" class="clickable-img transparent">
+            </div>
+
+            <!-- Roommate: Grayson -->
+            <div class="clickable roommate" data-target="grayson" data-page="roommates" 
+                 style="left: 78%; top: 33%; width: 32%;">
+              <img src="images/grayson.png" alt="Grayson" class="clickable-img transparent">
+            </div>
+
+            <!-- Object: Plant -->
+            <div class="clickable object" data-target="plant" 
+                 data-name="Plant"
+                 data-description="One of many plants in the apartment. They were all bought and raised by Grayson. 
+                  He loves plants and has a green thumb."
+                 style="left: 48%; top: 46%; width: 10%;">
+              <img src="images/plant.png" alt="Plant" class="clickable-img transparent">
+            </div>
+
+            <!-- Object: Clown painting -->
+            <div class="clickable object" data-target="clown" 
+                 data-name="Clown Painting"
+                 data-description="Ricky found this painting at a garage sale.
+                  Dorian really does not like it and thinks it is both tacky and scary."
+                 style="left: 24%; top: 18%; width: 18%;">
+              <img src="images/clown.png" alt="Clown" class="clickable-img transparent">
+            </div>
+
+            <!-- Object: Rug -->
+            <div class="clickable object rug-special" data-target="rug" 
+                 data-name="Rug"
+                 data-description="Ricky bought this rug on a local online marketplace. Dorian thinks it is ugly and 
+                  flesh-colored. Grayson likes how fluffy it is and will sometimes spend 30 minutes rubbing 
+                  his feet into it. Dorian avoids the living room when he notices this is happening."
+                 style="left: 45%; top: 52%; width: 40%;">
+              <img src="images/rug.png" alt="Rug" class="clickable-img transparent">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+            
+          
+        
+        <!-- Object description popup (appears on home page) -->
+        <div id="object-popup" class="object-popup" style="display: none;">
+          <button class="close-popup" onclick="closeObjectPopup()">✕</button>
+          <h3 id="popup-title"></h3>
+          <p id="popup-description"></p>
+        </div>
+      </div>
+    </section>
+        
+
+     <!-- image gallery -->
+     <section id="page-image gallery" class="page">
+        <div class="gallery-wrapper">
+            <div class="gallery-title"> image gallery</div>
+            <div class="carousel">
+                <button class="carousel-btn" id="prevBtn" aria-label="previous image"></button>
+                <div class="carousel-image-container" id="imageContainer">
+                    <img id="galleryImage" src="https://picsum.photos/id/1015/400/300" alt="gallery image">
+                </div>
+                <button class="carousel-btn" id="nextBtn" aria-label="next image"></button>
+            </div>
+            <div class="gallery-counter" id="imageCounter">1 / 4</div>
+        </div>
+    </section>
+
+    <!--roommates-->
+  <section id="page-roommates" class="page">
+    <div class="roommates-container">
+        <!-- Roommate cards with images and descriptions -->
+        <div class="roommate-cards">
+           <h5>Roommates</h5>
+            
+            <!-- Ricky -->
+            <div class="roommate-card" id="card-ricky">
+                <div class="roommate-image">
+                    <img src="images/selfier.jpeg" alt="Ricky">
+                </div>
+                <div class="roommate-info">
+                    <h3>Ricky</h3>
+                    <p>Ricky is 27 years old and a very open-minded, non-judgemental guy. He is gay and loves to party. 
+                      He doesn't care about what role he takes in a relationship, he'll do whatever. He's a bit trusting 
+                      to a fault and Dorian says he could use some paranoia and anxiety in his life. Ricky was the one 
+                      who origninally recruited all the roommates via a poorly written Craiglist ad. He works part-time 
+                      at the Foot Locker and part-time at a bar. He doesn't believe in one god, but three gods. Basharr, 
+                      Rombus, and Kristian. Basharr looks like a traditional monk, Rombus is a very striking blue, and 
+                      Kristian is hot pink. Every Sunday, Ricky goes to an alleyway in NY with a zen garden built in. 
+                      Within this garden, there lies a pond and a small bowl. He's supposed to put $50 in the bowl and 
+                      gently push it and let the pond carry it away. This ensures that he is protected and can proceed 
+                      with the ascension (the afterlife for him). Every Thursday, he goes to his religion's version of 
+                      mass where they tell everyone that if they don't keep donating $50, they will not get to the 
+                      ascension.
+                    </p>
+                    <p>At home, he is the positive roommate. He sees the good in both of his roommates and tries to keep the peace. 
+                      He likes to decorate with pieces that may come across as tacky (especially to Dorian). Unfortunately, 
+                      he can be quite messy. He leaves his dishes in the sink for too long sometimes and forgets to take out the trash. 
+                      And his room? Oh boy, it's in horrible condition.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Dorian -->
+            <div class="roommate-card" id="card-dorian">
+                <div class="roommate-image">
+                    <img src="images/selfied.jpeg" alt="Dorian">
+                </div>
+                <div class="roommate-info">
+                    <h3>Dorian</h3>
+                    <p>Dorian is also 27 years old. His mom named him after Dorian Grey from the Oscar Wilde novel because of the homosexual 
+                      undertones of the novel. At first, his mother thought she was bisexual, but after getting pregnant by her hubsand, she 
+                      realized that men were not for her. Her husband also realized he was gay. Even though they realized this they remained 
+                      married, therefore maintaining a lavender marriage. They decided to go with this route as they grew up in a conservative 
+                      town. However, once they moved to New York, they had a very loose lifestyle that Dorian felt embarrassed and ashamed by.
+                      Even though his parents weren't religious, he took it upon himself as a child to become a devout Christian. For a very 
+                      long he tried to convince himself he wasn't gay. However, he realized the church would hate him if they ever found out 
+                      the true nature of his emotions, so he left. He does not like to do leg day at the gym.
+                    </p>
+                    <p>Dorian met Ricky through a friend of a friend who sent him the Craiglist ad where Ricky was looking for roommates. 
+                      He is a rather rigid and stuck up individual. He doesn't like how messy Ricky can be sometimes and hates it when he leaves 
+                      the dishes in the sink or forgets to take out the trash. He also dislikes how often Ricky brings people over and how loud 
+                      they can be at times. Not only that, but he believes that Ricky's sense of decor is rather tacky. He is scared of Grayson 
+                      and doesn't really like him. Despite all of this, he stays because the rent is cheap and it's close to his job.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Grayson -->
+            <div class="roommate-card" id="card-grayson">
+                <div class="roommate-image">
+                    <img src="images/selfieg.jpeg" alt="Grayson">
+                </div>
+                <div class="roommate-info">
+                    <h3>Grayson</h3>
+                    <p>This is Grayson Smith. Age unknown, date of birth unknown. All his roommates know is that he's agnostic and leaves
+                      at 7am and comes back home at 5pm. They don't know where he goes. He also occasionally leaves at 2 or 3 am and comes 
+                      back before 7am. Again, they don't know where he goes. Grayson doesn't speak. He has a ghastly, almost sickly appearance. 
+                      His skin is basically grey. Despite his appearance, he is a pretty nice guy. Much like his roommates he is gay. He 
+                      likes men that are his exact height (which changes) so he can look them straight in the face without having to look up or 
+                      down. Grayson really likes to people watch. It comes from a genuine place of curiosity and wonder. Not only that, but 
+                      both of his eyes used to be the same size before one of them shrunk and impaired his vision. Therefore, he wants to make 
+                      the most out of his good eye by observing the world as much as he can. He's a bit scared that one day his other eye will 
+                      shrink and he won't be able to see at all.
+                    </p>
+                    <p>He likes to watch his roommates sometimes. He's watched Dorian from the crack in his door, watching BTS videos 
+                      (Dorian is a secret BTS fan, but doesn't want to admit it). Grayson is a good roommate. He takes out the trash, 
+                      does his dishes, sometimes makes extra food for his roommates, and pays rent on time. He was the first guy to 
+                      respond to Ricky's Craiglist ad.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+            
+    
+
+    <!--surprise-->
+    <section id="page-surprise" class="page">
+        <div class="video-placeholder">
+            <div class="video-container">
+                    <video controls autoplay poster="images/graysonn.jpg">
+                      <source src="Surprise.mp4" type="video/mp4">
+                    </video>
+            </div>
+        </div>
+    </section>
+</section>
+</div>
+</body>
+</html>
+<!--Code generated with the help of DeepSeek and/or DeepSeek was used as an aid-->
