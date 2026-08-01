@@ -36,7 +36,7 @@ The user should have some fun and interact with the various interactive elements
 The text and containers conform to smaller browser sizes
 
 ## User Testing
-With the user testing, I saw that users understoof how the navigation menu worked and what buttons to press. Additionally, they understood how to use the image gallery and after changing the browser size, things didn't seem messed up. I learned that that the connection to the space theme didn’t seem super obvious and that I could make it clearer. Testers uggested adding more designs and intrigue to the website. That, and more descriptions on the roommates. This helped when working on and wrapping up my project.
+With the user testing, I saw that users understood how the navigation menu worked and what buttons to press. Additionally, they understood how to use the image gallery and after changing the browser size, things didn't seem messed up. I learned that that the connection to the space theme didn’t seem super obvious and that I could make it clearer. Testers suggested adding more designs and intrigue to the website. That, and more descriptions on the roommates. This helped when working on and wrapping up my project.
 
 ## Revisions
 I added more interactions and effects, I made the connection to space clearer, and I added roommate descriptions.
